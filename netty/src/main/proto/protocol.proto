@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+// 生成的java文件的package路径
+option java_package = "com.zero.net.netty.examples.im.pb";
+// 生成的java文件名
+option java_outer_classname = "Protocol";
+
+// 用于发送给服务端的消息
+message SendMessage{
+  int64 id = 1;
+  string name = 2;
+  Gender gender = 3;
+  uint64 sendTime = 4;
+  bytes payload = 5;
+}
+
+// 用于回复客户端的消息
+message ReplyMessage{
+  bool success = 1;
+  uint64 replyTime = 2;
+  SendMessage sender = 3;
+}
+
+
+// 性别枚举
+enum Gender{
+  BOY = 0;
+  Girl = 1;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+// 生成的java文件的package路径
+option java_package = "io.zero._03_netty.packets.demo4.pb";
+// 生成的java文件名
+option java_outer_classname = "Protocol";
+
+// 定义消息体，客户端发送的消息体
+message PayloadRequest{
+  uint64 id = 1;
+  string name = 2;
+  bool isActive = 3;
+  int64 sendTime = 4;
+}
+
+// 定义消息体，服务端写回的消息体
+message PayloadReply{
+  uint64 id = 1;
+  string name = 2;
+  bool success = 3;
+  int64 recvTime = 4;
+}
