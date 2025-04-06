@@ -16,6 +16,7 @@
     </developers>
     <modules>
         <module>netty</module>
+        <module>vertx</module>
     </modules>
     <description>
         Java Network 相关
